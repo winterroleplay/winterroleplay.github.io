@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8" />
+    <title>Восстановление пароля | SAMP: Grand Role Play - Играй в GTA: SA по сети!</title>
+    <meta charset="Grand RP" />
+    <meta name="description" content="Grand Role Play - игровой проект захватывающего мультиплеера GTA: San Andreas. На нашем проекте Вы сможете попробовать себя в разных ролях игрового процесса.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="../assets/img/favicon_apple.png"/>
+    <link href="../assets/css/reset.css" rel="stylesheet">
+    <link href="../assets/fonts/bloggersans/bloggersans.css" rel="stylesheet">
+    <link href="../assets/fonts/intro/intro.css" rel="stylesheet">
+    <link href="../assets/fonts/roboto/roboto.css" rel="stylesheet">
+    <link href="../assets/fonts/fontawesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/animate.css">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link href="../assets/css/responsive.css" rel="stylesheet">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/nprogress.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/nprogress.css" />
+    <script charset="UTF-8" src="https://cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/bd74d0bd5641c62280c2b798fdb3fd4f_1.js" async></script>
+    <script>
+        wow = new WOW({
+            boxClass: 'wow', // default
+            animateClass: 'animated', // default
+            offset: 0, // default
+            mobile: true, // default
+            live: true // default
+        })
+        wow.init();
+    </script>
+    <script charset="UTF-8" src="https://cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/bd74d0bd5641c62280c2b798fdb3fd4f_1.js" async></script>
+</head>
+<div class='absoluterone'>
+    <div class='alert bad'>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <div class='col-xs-3'> <i class='fa fa-window-close-o' aria-hidden='true'></i> </div>
+                <div class='col-xs-9'>
+                    <p>Ошибка</p>
+                    <p><small id="error_msg"></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class='absoluter'>
+    <div class='alert nice'>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <div class='col-xs-3'> <i class='fa fa-check' aria-hidden='true'></i> </div>
+                <div class='col-xs-9'>
+                    <p>Успешно!</p>
+                    <p><small id="success_msg"></small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<body class='loginer no-account aller'>
+<div id='header'>
+    <div class='container'>
+        <div class='row'>
+
+            <div class='topline'>
+                <div class='col-xs-12'>
+                    <div class='col-xs-2'>
+                        <a href='../index.html'><img class='logo wow fadeIn' src='../assets/img/logo.png'></a>
+                    </div>
+                    <div class='col-md-7'>
+                        <ul class='mainMenu wow fadeInLeft wait-1'>
+                            <li><a href='../donate.html'><img src='../assets/img/donate.png'> Донат</a></li> <li>
+                                <a href='../index.html#play'><img src='../assets/img/howgame.png'> Как начать играть</a>
+                            </li>
+                            <li>
+                                <a href='http://forum.grand-rp.su/'><img src='../assets/img/forum.png'> Форум</a>
+                            </li>
+                            <li>
+                                <a href='../transfer.html'><img src='../assets/img/change.png'> Перенос аккаунта</a>
+                            </li>
+                            <li>
+                                <a href='../lottery.html'><img src='../assets/img/lotery.png'> Лотерея</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class='col-md-3'><a href='../account.html' class='login yellowShadow right animated wow fadeInRight wait-2'>Личный кабинет</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id='content'>
+    <div class='container'>
+        <div class='row'>
+            <h1 class='title wow fadeIn'>Проблемы со входом?</h1>
+            <form method="post" id="f-restorePassword">
+                <div class='col-xs-12'>
+                    <div class='col-xs-4 col-xs-offset-4'>
+                        <label for='inp-nickname' class='labler yellowShadowText'>Ваш ник</label>
+                        <input id='inp-nickname' class='allInp' name='login' type='text' required><i class="fa fa-id-card-o" aria-hidden="true"></i>
+                        <label for='inp-password' class='labler yellowShadowText'>Ваш E-mail</label>
+                        <input id='inp-mail' class='allInp' name='mail' type='text' required><i class="fa fa-envelope-open" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-10 col-xs-offset-1 textcenter padd30'>
+                        <div class='col-xs-4 changer'>
+                            <label for='inp-code' class='labler yellowShadowText'>Выбор сервера</label>
+                        </div>
+                        <div class='col-xs-4 changer'><label for='rad-mars'><i class='mars left'><i class='okayman'><i class="fa fa-check" aria-hidden="true"></i></i>
+                                </i>
+                                <p class='name'>Mars</p></label>
+                            <input id='rad-mars' name="server" type="radio" value="mars">
+                        </div>
+                        <div class='col-xs-4 changer'><label for='rad-saturn'><i class='saturn left'><i class='okayman'><i class="fa fa-check" aria-hidden="true"></i></i>
+                                </i>
+                                <p class='name'>Saturn</p></label>
+                            <input id='rad-saturn' name="server" type="radio" value="saturn">
+                        </div>
+                    </div>
+                </div>
+                <center><button name="recovery" type="sumbit" class='doButton'><i class="fa fa-arrow-right" aria-hidden="true"></i> Выслать инструкцию на E-Mail</button></center>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="../assets/js/changerServer.js"></script>
+<script src="../assets/js/common.js"></script>
+<script src="../assets/js/jquery.form.js"></script>
+<script>
+    $('#f-restorePassword').ajaxForm({
+        url: '/account/restore',
+        dataType: 'text',
+        success: function(data) {
+            console.log(data);
+            data = $.parseJSON(data);
+            switch(data.status) {
+                default:
+                    fly_p("danger", data.error);
+                    $(this).children('button[type=submit]').prop('disabled', false);
+                    break;
+                case 'success':
+                    fly_p("success", data.success);
+                    $("#inp-mail").val("");
+                    $(this).children('button[type=submit]').prop('disabled', false);
+                    break;
+            }
+        },
+        beforeSubmit: function(arr, $form, options) {
+            $(this).children('button[type=submit]').prop('disabled', true);
+        }
+    });
+</script>
+<div id='footer'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-xs-12 wow fadeIn wait-1'>
+                <div class='col-md-6'>
+                    <p><span>Социальные ссылки</span></p>
+                    <p><a href='https://www.youtube.com/channel/UCbvbWcNED6440a54T2tgtPw'><i class="fa fa-youtube" aria-hidden="true"></i> Youtube-канал</a></p>
+                    <p><a href='https://vk.com/grandrpsamp'><i class="fa fa-vk" aria-hidden="true"></i> Сообщество Вконтакте</a></p>
+                </div>
+                <div class='col-md-6 textright'>
+                    <p><span>Техническая поддержка</span></p>
+                    <p><a href='mailto:deal@grand-rp.su'><i class="fa fa-users" aria-hidden="true"></i> Обращение по поводу партнёрства</a></p>
+                </div>
+                <div class='col-md-6 textright'>
+                    <br><a href="http://www.megastock.com/" target="_blank"><img src="https://www.megastock.com/doc/Logo/acc_blue_on_white_ru.png" alt="www.megastock.com" border="0"/></a>
+                </div>
+            </div>
+        </div>
+        <p>
+        <center><small>Grand Roleplay © 2017</small></center>
+        </p>
+    </div>
+</div>
+<a href="restore.html#" class="go-top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+<script src="../assets/js/jquery.spincrement.js"></script>
+<script src="../assets/js/jquery.viewportchecker.min.js"></script>
+<script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/js/totop.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#online').viewportChecker({
+            callbackFunction: function () {
+                $('.spincrement').spincrement({
+                    duration: 4000,
+                    thousandSeparator:' ',
+                });
+            }
+        });
+    });
+</script>
+<script>
+    function initparticles() {
+        bubbles();
+    }
+    function bubbles() {
+        $.each($(".particletext.bubbles"), function(){
+            var bubblecount = ($(this).width()/50)*10;
+            for(var i = 0; i <= bubblecount; i++) {
+                var size = ($.rnd(40,80)/10);
+                $(this).append('<span class="particle" style="top:' + $.rnd(20,80) + '%; left:' + $.rnd(0,95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
+            }
+        });
+    }
+
+    jQuery.rnd = function(m,n) {
+        m = parseInt(m);
+        n = parseInt(n);
+        return Math.floor( Math.random() * (n - m + 1) ) + m;
+    }
+
+    initparticles();
+</script>
+<script type="text/javascript">
+    $('body').show();
+    NProgress.start();
+    setTimeout(function() { NProgress.done(); $('.fade').removeClass('out'); }, 1000);
+</script>
+</body>
+
+</html>
